@@ -1,0 +1,57 @@
+#!/bin/bash
+
+#Description: How to create a SonarQube server
+
+#Author:Miranda
+
+#Date: Feb 23th 2022
+
+echo "We are about to start your installation, please hang on tight while it installs......."
+echo
+sleep 2
+echo
+sudo yum update -y
+echo
+sleep 2
+echo
+echo "Now installing Java......"
+echo
+sudo yum install java-11-openjdk-devel -y01~
+echo
+sleep 2
+echo
+sudo yum install java-11-openjdk -y
+echo
+sleep 2
+echo
+sudo yum install wget -y
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.3.0.51899.zip01~
+echo
+sleep 2
+echo
+echo
+sudo yum install wget -y
+echo
+sleep 2
+echo
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.3.0.51899.zip01~
+echo
+sleep 2
+echo
+sudo unzip /opt/sonarqube-9.3.0.51899.zip
+echo
+sleep 2
+echo
+sudo chown -R vagrant:vagrant /opt/sonarqube-9.3.0.51899
+echo
+sleep 2
+echo
+cd /opt/sonarqube-9.3.0.51899/bin/linux-x86-64
+echo
+sleep 2
+echo
+./sonar.sh start
+echo
+sleep 2
+echo "Thank you for your patience, your installation is now complete..."
+
